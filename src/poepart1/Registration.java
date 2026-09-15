@@ -13,6 +13,8 @@ public class Registration {  // start of class
     String userName;
     String passWord;
     String cellPhone;
+    String firstName;
+    String lastName;
 
     public boolean checkUserName(String username) {// start of username method  
         if (username.contains("_") && username.length() <= 5) {
@@ -50,5 +52,11 @@ public class Registration {  // start of class
         return checkUserName(username) && checkPasswordComplexity(password) && checkCellPhoneNumber(cellphone);
 
     }
+    
+    public void setFirstName(String firstName) { this.firstName = firstName; }
+    public void setLastName(String lastName) {this.lastName = lastName;}
+    public String getFirstName() {return firstName;}
+    public String getLastName() {return lastName;}
+        
 
 } // end of class

@@ -22,6 +22,12 @@ public class POEPART1 {
         
         System.out.println("\n===== Register =====");
         
+        System.out.println("Please Enter Your First Name: ");
+        loginApp.setFirstName(scan.nextLine());
+        
+        System.out.println("Please Enter Your Last Name: ");
+        loginApp.setLastName(scan.nextLine());
+        
         System.out.println("Please enter the username: ");
         String username = scan.nextLine();
         
@@ -48,7 +54,7 @@ public class POEPART1 {
         String loginPassword = scan.nextLine();
         
         boolean status = loginApp.loginUser(loginUsername, loginPassword);
-        String message = loginApp.returnLoginStatus(status);
+        String message = loginApp.returnLoginStatus(status, loginApp.getFirstName(), loginApp.getLastName());
         System.out.println(message);
            
         
