@@ -23,7 +23,7 @@ public class Login extends Registration {
         if (status) {
             return "Login success";
         } else {
-            return "Login failed";
+            return "Useername or password incorrect, please try again.";
         }
     }
 }
