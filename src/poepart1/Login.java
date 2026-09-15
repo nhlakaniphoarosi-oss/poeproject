@@ -11,19 +11,16 @@ package poepart1;
 public class Login extends Registration {
 
     public boolean loginUser(String name, String password) {
-        if (name.equals(userName) && password.equals(password)) {
-            return true;
-        } else {
-            return false;
-        }
+        return (name.equals(userName) && password.equals(password)); 
+
 
     }
 
     public String returnLoginStatus(boolean status) {
         if (status) {
-            return "Login success";
+            return "Welcome " + userName + "," + " It is great to see you again.";
         } else {
-            return "Useername or password incorrect, please try again.";
+            return "Username or password incorrect, please try again.";
         }
     }
 }
