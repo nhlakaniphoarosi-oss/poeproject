@@ -87,11 +87,11 @@ public class RegistrationNGTest {
     @Test
     public void testRegisterUser() {
         System.out.println("registerUser");
-        String username = "";
-        String password = "";
-        String cellphone = "";
+        String username = "Si_ya";
+        String password = "User@1df";
+        String cellphone = "0719717169";
         Registration instance = new Registration();
-        String expResult = "";
+        String expResult = "Registration was a success";
         String result = instance.registerUser(username, password, cellphone);
         assertEquals(result, expResult);
         // TODO review the generated test code and remove the default call to fail.
