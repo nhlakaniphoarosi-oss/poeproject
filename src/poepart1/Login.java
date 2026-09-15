@@ -10,15 +10,15 @@ package poepart1;
  */
 public class Login extends Registration {
 
-    public boolean loginUser(String enteredUsername, String enteredPassword) {
-        return (enteredUsername.equals(userName) && enteredPassword.equals(passWord)); 
+    public boolean loginUser(String name, String password) {
+        return (name.equals(userName) && password.equals(password)); 
 
 
     }
 
     public String returnLoginStatus(boolean status) {
         if (status) {
-            return "Welcome " + userName + "," + " It is great to see you again.";
+            return "Welcome " + userName + "," + "It is great to see you again.";
         } else {
             return "Username or password incorrect, please try again.";
         }
