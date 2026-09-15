@@ -17,39 +17,39 @@ public class POEPART1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Login register = new Login();
+        Login loginApp = new Login();
         Scanner scan = new Scanner(System.in);
         
         System.out.println("\n===== Register =====");
         
         System.out.println("Please enter the username: ");
-        String name = scan.nextLine();
+        String username = scan.nextLine();
         
         System.out.println("Enter password");
         String password = scan.nextLine();
         
         System.out.println("Enter your phone number");
-        String cellphone = scan.nextLine();
+        String cellPhone = scan.nextLine();
         
+        String regStatus = loginApp.registerUser(username, password, cellPhone);
+        System.out.println(regStatus);
         
-        System.out.println(register.registerUser(name, password, cellphone));
+         
         
-        if(!register.registerStatus(name, password, cellphone)){
-           return; 
-        }
         
            
            
          System.out.println("\n===== Login =====");
         
         System.out.println("Please enter the username to login: ");
-        String userName = scan.nextLine();
+        String loginUsername = scan.nextLine();
         
         System.out.println("Enter password to login");
-        String passWord = scan.nextLine();
+        String loginPassword = scan.nextLine();
         
-        System.out.println(register.loginUser(userName, passWord));
-        
+        boolean status = loginApp.loginUser(loginUsername, loginPassword);
+        String message = loginApp.returnLoginStatus(status);
+        System.out.println(message);
            
         
         
