@@ -60,8 +60,8 @@ public class LoginNGTest {
         System.out.println("returnLoginStatus");
         boolean status = false;
         Login instance = new Login();
-        String expResult = "Login failed";
-        String result = instance.returnLoginStatus(status);
+        String expResult = "Username or password incorrect, please try again.";
+        String result = instance.returnLoginStatus(status, "Kyle", "ll");
         assertEquals(result, expResult);
         // TODO review the generated test code and remove the default call to fail.
         
