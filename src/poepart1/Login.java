@@ -11,7 +11,7 @@ package poepart1;
 public class Login extends Registration {
 
     public boolean loginUser(String name, String password) {
-        return (name.equals(this.userName) && password.equals(this.passWord)); 
+        return (name.equals(this.username) && password.equals(this.password)); 
 
 
     }

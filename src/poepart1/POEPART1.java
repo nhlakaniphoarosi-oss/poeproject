@@ -19,6 +19,7 @@ public class POEPART1 {
         // TODO code application logic here
         Login loginApp = new Login();
         Scanner scan = new Scanner(System.in);
+        Messages msg = new Messages();
         
         System.out.println("\n===== Register =====");
         
@@ -56,10 +57,35 @@ public class POEPART1 {
         boolean status = loginApp.loginUser(loginUsername, loginPassword);
         String message = loginApp.returnLoginStatus(status, loginApp.getFirstName(), loginApp.getLastName());
         System.out.println(message);
-           
         
-        
-       
+        if (status == true) {
+
+            int option;
+            
+
+            do {
+                System.out.println("\n===== Select any of the option below =====");
+                System.out.println("1. Send message");
+                System.out.println("2. Message Management");
+                System.out.println("3. Exit");
+
+                option = scan.nextInt();
+
+                switch (option) {
+                    case 1 ->
+                        msg.sendingMessages();
+                    case 2 ->
+                        msg.messageManagementMenu();
+                    case 3 ->
+                        System.out.println("Good bye!!");
+                    default ->
+                        System.out.println("Invalid option!!");
+                }
+
+            } while (option != 3);
+        }
+
     }
-    
+
 }
+           

@@ -10,11 +10,11 @@ package poepart1;
  */
 public class Registration {  // start of class
 
-    String userName;
-    String passWord;
-    String cellPhone;
-    String firstName;
-    String lastName;
+    String username;
+    String password;
+    private String cellphoneNumber;
+    private String firstName;
+    private String lastName;
 
     public boolean checkUserName(String username) {// start of username method  
         if (username.contains("_") && username.length() <= 5) {
@@ -38,9 +38,9 @@ public class Registration {  // start of class
     public String registerUser(String username, String password, String cellphone) {
 
         if (checkUserName(username) && checkPasswordComplexity(password) && checkCellPhoneNumber(cellphone)) {
-            this.userName = username;
-            this.passWord = password;
-            this.cellPhone = cellphone;
+            this.username = username;
+            this.password = password;
+            this.cellphoneNumber = cellphone;
 
             return "Registration was a success";
         } else {
