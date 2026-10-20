@@ -12,9 +12,9 @@ public class Registration {  // start of class
 
     String username;
     String password;
-    private String cellphoneNumber;
-    private String firstName;
-    private String lastName;
+    String cellphoneNumber;
+    String firstName;
+    String lastName;
 
     public boolean checkUserName(String username) {// start of username method  
         if (username.contains("_") && username.length() <= 5) {

@@ -16,9 +16,9 @@ public class Login extends Registration {
 
     }
 
-    public String returnLoginStatus(boolean status, String firstName, String lastName) {
-        if (status) {
-            return "Welcome " + getFirstName() + " " + getLastName() + " Login Sucessful.";
+    public String returnLoginStatus(boolean loginStatus) {
+        if (loginStatus) {
+            return "Welcome " + firstName + " " + lastName + " Login Sucessful.";
         } else {
             return "Username or password incorrect, please try again.";
         }
